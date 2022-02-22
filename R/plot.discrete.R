@@ -1,11 +1,11 @@
 #' Graphing function for Discrete Distributions.
 #' 
 #' Handles how discrete distributions are graphed. Users should not use this
-#' function. Instead, users should use \code{link{plot.it}}.
+#' function. Instead, users should use \code{link{plotDistribution}}.
 #' 
 #' 
 #' @param dist contains the distribution from
-#' \code{link{plot.distributions}}.
+#' \code{link{list.distributions}}.
 #' @param stat a statistic to obtain the probability from. When using the
 #' "bounded" condition, you must supply the parameter as `stat =
 #' c(lower_bound, upper_bound)`. Otherwise, a simple `stat =
@@ -25,15 +25,15 @@
 #' For bounded condition use: `strict=c(0,1)` or
 #' `strict=c(FALSE,TRUE)`.
 #' @author James Balamuta
-#' @seealso [plot.it()], [plot.binom()],
+#' @seealso [plotDistribution()], [plot.binom()],
 #' [plot.geom()], [plot.hyper()],
 #' [plot.nbinom()], [plot.pois()].
 #' @export
 #' @keywords plot
 #' @examples
 #' 
-#' # Function does not have dist look up, must go through plot.it
-#' plot.it(dist='geom', stat = c(2,4), params = list(prob = .75), section = "bounded",
+#' # Function does not have dist look up, must go through plotDistribution
+#' plotDistribution(dist='geom', stat = c(2,4), params = list(prob = .75), section = "bounded",
 #'           strict = c(0,1))
 #' 
 plot.discrete <- function(dist, stat = c(0,1), params, section = "lower", strict){

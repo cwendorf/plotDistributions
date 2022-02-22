@@ -1,11 +1,11 @@
 #' Graphing function for Continuous Distributions.
 #' 
 #' Handles how continuous distributions are graphed. Users should not use this
-#' function. Instead, users should use [plot.it()].
+#' function. Instead, users should use [plotDistribution()].
 #' 
 #' 
 #' @param dist contains the distribution from
-#' [plot.distributions()].
+#' [list.distributions()].
 #' @param stat a statistic to obtain the probability from. When using the
 #' "bounded" condition, you must supply the parameter as `stat =
 #' c(lower_bound, upper_bound)`. Otherwise, a simple `stat =
@@ -20,7 +20,7 @@
 #' `section=` either `"lower"`,`"bounded"`, `"upper"`,
 #' or`"tails"`.
 #' @author James Balamuta
-#' @seealso [plot.it()], [plot.beta()],
+#' @seealso [plotDistribution()], [plot.beta()],
 #' [plot.chisq()], [plot.exp()],
 #' [plot.gamma()], [plot.norm()],
 #' [plot.unif()], [plot.cauchy()]\*,
@@ -31,8 +31,8 @@
 #' @keywords plot
 #' @examples
 #' 
-#' # Function does not have dist look up, must go through plot.it
-#' plot.it(dist='norm', stat = c(0,1), params = list(mu = 1, sd = 1), section = "bounded")
+#' # Function does not have dist look up, must go through plotDistribution
+#' plotDistribution(dist='norm', stat = c(0,1), params = list(mu = 1, sd = 1), section = "bounded")
 #' 
 plot.continuous <- function(dist, stat = c(0,1), params, section = "lower"){  
   #Perform the approriate scales to center the distribution.

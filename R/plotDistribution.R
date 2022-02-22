@@ -42,23 +42,23 @@
 #' @examples
 #' 
 #' # Defaults to lower tail evaluation
-#' plot.it(dist = 'norm', stat = 1, list(mu = 3 , sd = 2), section = "lower")
+#' plotDistribution(dist = 'norm', stat = 1, list(mu = 3 , sd = 2), section = "lower")
 #' 
 #' # Set to evaluate the upper tail.
-#' plot.it(dist = 'norm', stat = 1, list(mu=3,sd=2),section="upper")
+#' plotDistribution(dist = 'norm', stat = 1, list(mu=3,sd=2),section="upper")
 #' 
 #' # Set to shade inbetween a bounded region.
-#' plot.it(dist = 'norm', stat = c(-1,1), list(mu=0,sd=1), section="bounded")
+#' plotDistribution(dist = 'norm', stat = c(-1,1), list(mu=0,sd=1), section="bounded")
 #' 
 #' # Gamma distribution evaluated at upper tail.
-#' plot.it(dist = 'gamma', stat = 2, params = list(alpha=2,beta=1),section="upper")
+#' plotDistribution(dist = 'gamma', stat = 2, params = list(alpha=2,beta=1),section="upper")
 #' 
 #' # Binomial distribution evaluated at lower tail.
-#' plot.it('binom', stat = 2, params = list(n=4,p=.5))
+#' plotDistribution('binom', stat = 2, params = list(n=4,p=.5))
 #' 
 #' 
-plot.it <- function(dist='norm', stat = c(0,1), params = list(mu = 0, sd = 1), section = "lower", strict = c(0,1)) {
-  dist = plot.distributions[[casefold(dist)]]
+plotDistribution <- function(dist='norm', stat = c(0,1), params = list(mu = 0, sd = 1), section = "lower", strict = c(0,1)) {
+  dist = list.distributions[[casefold(dist)]]
   if(is.null(dist)) stop("Distribution not found.\n")
   if(length(params) != dist$params) stop("Invalid amount of parameters provided.\n")
     
