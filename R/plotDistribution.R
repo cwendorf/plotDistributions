@@ -1,62 +1,6 @@
-#' plot's Processing Function
-#' 
-#' Acts as a director of traffic and first line of error handling regarding
-#' submitted visualization requests. This function should only be used by
-#' advanced users.
-#' 
-#' 
-#' @param dist a string that should be contain a supported probability
-#' distributions name in R. Supported continuous distributions: `"beta"`,
-#' `"chisq"`, `"exp"`, `"gamma"`, `"norm"`, and
-#' `"unif"`. Supported discrete distributions: `"binom"`,
-#' `"geom"`, `"hyper"`, `"nbinom"`, and `"pois"`.
-#' @param stat a statistic to obtain the probability from. When using the
-#' "bounded" condition, you must supply the parameter as `stat =
-#' c(lower_bound, upper_bound)`. Otherwise, a simple `stat =
-#' desired_point` will suffice.
-#' @param params A list that must contain the necessary parameters for each
-#' distribution. For example, `params = list(mu = 1, sd = 1)` would be for
-#' a normal distribution with mean 1 and standard deviation 1. If you are not
-#' aware of the parameters for the distribution, consider using the
-#' `plot.dist` functions listed under the "See Also" section.
-#' @param section Select how you want the statistic(s) evaluated via
-#' `section=` either `"lower"`,`"bounded"`, `"upper"`,
-#' or`"tails"`.
-#' @param strict Determines whether the probability will be generated as a
-#' strict (<, >) or equal to (<=, >=) inequality. `strict=` requires
-#' either values = 0 or =FALSE for strict OR values =1 or =TRUE for equal to.
-#' For bounded condition use: `strict=c(0,1)` or
-#' `strict=c(FALSE,TRUE)`.
-#' @return Returns a plot of the distribution according to the conditions
-#' supplied.
-#' @author James Balamuta
-#' @export
-#' @seealso [plot.beta()], [plot.chisq()],
-#' [plot.exp()], [plot.gamma()],
-#' [plot.norm()], [plot.unif()],
-#' [plot.binom()], [plot.geom()],
-#' [plot.hyper()], [plot.nbinom()],
-#' [plot.pois()].
-#' @references http://cran.r-project.org/web/views/Distributions.html
-#' @keywords plot
-#' @examples
-#' 
-#' # Defaults to lower tail evaluation
-#' plotDistribution(dist = 'norm', stat = 1, list(mu = 3 , sd = 2), section = "lower")
-#' 
-#' # Set to evaluate the upper tail.
-#' plotDistribution(dist = 'norm', stat = 1, list(mu=3,sd=2),section="upper")
-#' 
-#' # Set to shade inbetween a bounded region.
-#' plotDistribution(dist = 'norm', stat = c(-1,1), list(mu=0,sd=1), section="bounded")
-#' 
-#' # Gamma distribution evaluated at upper tail.
-#' plotDistribution(dist = 'gamma', stat = 2, params = list(alpha=2,beta=1),section="upper")
-#' 
-#' # Binomial distribution evaluated at lower tail.
-#' plotDistribution('binom', stat = 2, params = list(n=4,p=.5))
-#' 
-#' 
+# plotDistributions
+## Main Processing Function
+
 plotDistribution <- function(dist='norm', stat = c(0,1), params = list(mu = 0, sd = 1), section = "lower", strict = c(0,1)) {
   dist = list.distributions[[casefold(dist)]]
   if(is.null(dist)) stop("Distribution not found.\n")
