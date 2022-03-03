@@ -42,3 +42,13 @@ q.cdf(params=c(nmeans=2,df=10))
 q.cdf(params=c(nmeans=2,df=10),limits=c(1,1000))
 q.cdf(params=c(nmeans=2,df=10),probs=c(.95,.99999))
 
+### Chi Square Distribution
+
+chisq.pdf(params=c(df=10))
+chisq.pdf(params=c(df=10),limits=c(10,1000))
+chisq.pdf(params=c(df=10),probs=c(.95,.99999))
+
+chisq.cdf(params=c(df=10))
+chisq.cdf(params=c(df=10),limits=c(10,1000))
+chisq.cdf(params=c(df=10),probs=c(.95,.99999))
+
