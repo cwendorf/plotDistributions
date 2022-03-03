@@ -18,7 +18,7 @@ list.distributions = list(
     },
     density = function(x,params, ncp = 0, lower.tail = TRUE, log = FALSE, ...) {
       if(params[[1]] <= 0 || params[[2]] <= 0) stop("Error: Need alpha, beta  > 0")
-        dbeta(x,params[[1]], params[[2]], ncp = ncp, log = log)
+      dbeta(x,params[[1]], params[[2]], ncp = ncp, log = log)
     },
     probability = function(q,params, ncp = 0, lower.tail = TRUE, log.p = FALSE, ...) {
       if(params[[1]] <= 0 || params[[2]] <= 0) stop("Error: Need alpha, beta  > 0")
