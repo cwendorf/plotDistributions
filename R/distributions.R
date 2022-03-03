@@ -29,3 +29,9 @@ q.cdf <- function(params=NULL,limits=c(NULL,NULL),probs=c(NULL,NULL)) {
   do.call(plot.cdf,calc.cdf(main="Studentized Range Distribution",fns=c(qtukey,ptukey,dtukey),params=params,limits=limits,probs=probs))
 }
 
+chisq.pdf <- function(params=NULL,limits=c(NULL,NULL),probs=c(NULL,NULL)) {
+  do.call(plot.pdf,calc.pdf(main="Chi Square Distribution",fns=c(qchisq,pchisq,dchisq),params=params,limits=limits,probs=probs))
+}
+chisq.cdf <- function(params=NULL,limits=c(NULL,NULL),probs=c(NULL,NULL)) {
+  do.call(plot.cdf,calc.cdf(main="Chi Square Range Distribution",fns=c(qchisq,pchisq,dchisq),params=params,limits=limits,probs=probs))
+}
