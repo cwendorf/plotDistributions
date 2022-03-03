@@ -19,7 +19,7 @@ library(plotDistributions)
 If you do not wish a full install, the latest functions can be sourced directly from GitHub:
 
 ```r
-source("http://raw.githubusercontent.com/cwendorf/polyplot2/main/source-plotDistributions.R")
+source("http://raw.githubusercontent.com/cwendorf/plotDistributions/main/source-plotDistributions.R")
 ```
 
 ### Usage
