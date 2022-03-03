@@ -60,15 +60,15 @@ plot.cdf <- function(main,x,y,limits=NULL,yy=NULL,difference=NULL) {
   plot(NULL,bty="l",xlim=range(x),ylim=c(0,1),lwd=2,xlab="",ylab="Cumulative Probability",main=main)
   mtext("Cumulative Distribution Function",padj=-1)
   if(!is.null(limits)) { 
-    lines(c(limits[1],limits[1]),c(0,yy[1]),lty="dashed")
-    lines(c(limits[2],limits[2]),c(0,yy[2]),lty="dashed")
+    lines(c(limits[1],limits[1]),c(.1*(max(y)-min(y)),yy[1]),lty="dashed")
+    lines(c(limits[2],limits[2]),c(.1*(max(y)-min(y)),yy[2]),lty="dashed")
     text(limits[1],0,round(limits[1],3),pos=3)
     text(limits[2],0,round(limits[2],3),pos=3)
-    lines(c(min(x),limits[1]),c(yy[1],yy[1]),lty="dashed")
-    lines(c(min(x),limits[2]),c(yy[2],yy[2]),lty="dashed")
+    lines(c(min(x)+.13*(max(x)-min(x)),limits[1]),c(yy[1],yy[1]),lty="dashed")
+    lines(c(min(x)+.13*(max(x)-min(x)),limits[2]),c(yy[2],yy[2]),lty="dashed")
     text(min(x),yy[1],round(yy[1],3),pos=4)
     text(min(x),yy[2],round(yy[2],3),pos=4)
     result <- paste("Difference = ",round(difference,3))
-    title(sub=result)}
+    if(!is.na(difference)) title(sub=result)}
   lines(x,y,col="black")
 }
