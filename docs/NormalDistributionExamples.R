@@ -3,8 +3,6 @@
 
 ### Children's IQ scores are normally distributed with a mean of 100 and a standard deviation of 15. 
 
-mean=100; sd=15
-
 ### What proportion of children are expected to have an IQ less than 80?
 
 norm.pdf(params=c(mean=100,sd=15),limits=c(0,80))
