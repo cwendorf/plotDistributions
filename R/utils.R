@@ -23,10 +23,11 @@ calc.pdf <- function(main,fns,params=NULL,limits=c(NULL,NULL),probs=c(NULL,NULL)
   x <- seq(lb,ub,len=1000); y <- eval.dist(fns[[3]],x,params)
   px <- NULL; py <- NULL; area <- NULL 
   if(!is.null(probs)) {
-    limits[1] <- eval.dist(fns[[1]],probs[1],params); limits[2] <- eval.dist(fns[[1]],probs[2],params)}
+    limits <- eval.dist(fns[[1]],probs,params)}
   if(!is.null(limits)) { 
     xx <- seq(limits[1],limits[2],0.01); px <- c(limits[1],xx,limits[2]); py <- c(0,eval.dist(fns[[3]],xx,params),0)
-    area <- eval.dist(fns[[2]],limits[2],params)-eval.dist(fns[[2]],limits[1],params)}
+    yy <- eval.dist(fns[[2]],limits,params)
+    area <- round(yy[2]-yy[1],3)}
   list(main=main,x=x,y=y,px=px,py=py,area=area)
 }
 
@@ -35,7 +36,7 @@ calc.cdf <- function(main,fns,params=NULL,limits=c(NULL,NULL),probs=c(NULL,NULL)
   x <- seq(lb,ub,len=1000); y <- eval.dist(fns[[2]],x,params)
   yy <- NULL; difference <- NULL
   if(!is.null(probs)) {
-    limits[1] <- eval.dist(fns[[1]],probs[1],params); limits[2] <- eval.dist(fns[[1]],probs[2],params)}
+    limits <- eval.dist(fns[[1]],probs,params)}
   if(!is.null(limits)) { 
     yy <- eval.dist(fns[[2]],limits,params)
     difference <- round(yy[2]-yy[1],3)}
