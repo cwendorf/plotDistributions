@@ -1,6 +1,6 @@
 # plotDistributions
 
-## Developmental Version
+## plotDistributions 0.1.220303
 
 - Initial release
 - Plotting of built in R distributions
