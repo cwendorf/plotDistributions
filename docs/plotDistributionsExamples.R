@@ -1,6 +1,8 @@
 # plotDistributions
 ## Density and Cumulative Distribution Examples
 
+source("http://raw.githubusercontent.com/cwendorf/plotDistributions/main/source-plotDistributions.R")
+
 ### Normal Distribution
 
 norm.pdf()
@@ -9,10 +11,11 @@ norm.pdf(probs=c(.025,.975))
 norm.pdf(probs=c(.5,.9999))
 
 norm.cdf()
-norm.cdf(limits=c(2))
+norm.cdf(limits=c(1))
 norm.cdf(limits=c(1,2))
 norm.cdf(probs=c(.95))
 norm.cdf(probs=c(.025,.975))
+
 
 ### Student's Distribution
 
@@ -41,12 +44,13 @@ f.cdf(params=c(df1=2,df2=10),probs=c(.95,.99999))
 ### Studentized Range Distribution
 
 q.pdf(params=c(nmeans=2,df=10))
-q.pdf(params=c(nmeans=2,df=10),limits=c(1,1000))
+q.pdf(params=c(nmeans=2,df=10),limits=c(2,1000))
 q.pdf(params=c(nmeans=2,df=10),probs=c(.95,.99999))
 
 q.cdf(params=c(nmeans=2,df=10))
-q.cdf(params=c(nmeans=2,df=10),limits=c(1))
-q.cdf(params=c(nmeans=2,df=10),limits=c(1,1000))
+q.cdf(params=c(nmeans=2,df=2),limits=c(6.08536))
+q.cdf(params=c(nmeans=2,df=10),limits=c(2,1000))
+q.cdf(params=c(nmeans=3,df=10),probs=c(.95))
 q.cdf(params=c(nmeans=2,df=10),probs=c(.95,.99999))
 
 ### Chi Square Distribution
