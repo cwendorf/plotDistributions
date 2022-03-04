@@ -2,7 +2,7 @@ Package: plotDistributions
 Type: Package
 Title: plotDistributions
 Description: An R Package to Visualize Distributions 
-Version: 0.1.220221
+Version: 0.1.220303
 Depends: R (>= 3.6.2)
 Encoding: UTF-8
 LazyData: true
