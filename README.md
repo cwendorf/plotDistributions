@@ -1,13 +1,13 @@
 # plotDistributions
 
-## An R Package to Visualize Distributions
+## Visualizing Probability Distributions
 
 [![minimal R version](https://img.shields.io/badge/R%3E%3D-3.6.2-6666ff.svg)](https://cran.r-project.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ### Overview
 
-**plotDistributions** is a small package for plotting the probability density and cumulative distribution functions for various continuous distributions. It provides functionality to highlight probabilities and critical values. 
+**plotDistributions** is a small R package for plotting the probability density and cumulative distribution functions for various continuous distributions. It provides functionality to highlight probabilities and display critical values. 
 
 ### Installation
 
@@ -38,4 +38,4 @@ Simple documentation and tutorials are available:
 
 ### Citation
 
-Wendorf, C.A. (2022). *plotDistributions* [R Package]. [https://github.com/cwendorf/plotDistributions](https://github.com/cwendorf/plotDistributions)
+Wendorf, C.A. (2022). *plotDistributions: Visualizing probability distributions* [R Package]. [https://github.com/cwendorf/plotDistributions](https://github.com/cwendorf/plotDistributions)
