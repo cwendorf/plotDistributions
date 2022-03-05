@@ -1,5 +1,5 @@
 # plotDistributions
-## Density and Cumulative Distribution Examples
+## Probability Density and Cumulative Distribution Examples
 
 source("http://raw.githubusercontent.com/cwendorf/plotDistributions/main/source-plotDistributions.R")
 
