@@ -1,6 +1,8 @@
 # plotDistributions
 ## Normal Distribution Examples
 
+source("http://raw.githubusercontent.com/cwendorf/plotDistributions/main/source-plotDistributions.R")
+
 ### Children's IQ scores are normally distributed with a mean of 100 and a standard deviation of 15. 
 
 ### What proportion of children are expected to have an IQ less than 80?
