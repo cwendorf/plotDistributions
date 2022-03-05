@@ -7,10 +7,4 @@ source("http://raw.githubusercontent.com/cwendorf/plotDistributions/main/source-
 
 ### Normal Distribution
 
-norm.pdf(limits=c(1))
-norm.pdf(limits=c(1,2))
-
-norm.cdf(limits=c(1))
-norm.cdf(limits=c(1,2))
-
 
