@@ -6,9 +6,10 @@ source("http://raw.githubusercontent.com/cwendorf/plotDistributions/main/source-
 ### Normal Distribution
 
 norm.pdf()
+norm.pdf(limits=c(1))
 norm.pdf(limits=c(1,Inf))
 norm.pdf(limits=c(1,2))
-norm.pdf(probs=c(.5,1))
+norm.pdf(probs=c(.95))
 norm.pdf(probs=c(.025,.975))
 
 norm.cdf()
@@ -20,9 +21,10 @@ norm.cdf(probs=c(.025,.975))
 ### Student's Distribution
 
 t.pdf(params=c(df=5))
+t.pdf(params=c(df=5),limits=c(1))
 t.pdf(params=c(df=5),limits=c(1,Inf))
 t.pdf(params=c(df=5),limits=c(1,2))
-t.pdf(params=c(df=5),probs=c(.5,1))
+t.pdf(params=c(df=5),probs=c(.95))
 t.pdf(params=c(df=5),probs=c(.025,.975))
 
 t.cdf(params=c(df=5))
@@ -34,6 +36,7 @@ t.cdf(params=c(df=5),probs=c(.025,.975))
 ### F Distribution
 
 f.pdf(params=c(df1=2,df2=10))
+f.pdf(params=c(df1=2,df2=10),limits=c(3))
 f.pdf(params=c(df1=2,df2=10),limits=c(3,Inf))
 f.pdf(params=c(df1=2,df2=10),probs=c(.95,1))
 
@@ -46,6 +49,7 @@ f.cdf(params=c(df1=2,df2=10),probs=c(.95,1))
 ### Studentized Range Distribution
 
 q.pdf(params=c(nmeans=2,df=10))
+q.pdf(params=c(nmeans=2,df=10),limits=c(2))
 q.pdf(params=c(nmeans=2,df=10),limits=c(2,Inf))
 q.pdf(params=c(nmeans=2,df=10),probs=c(.95,1))
 
@@ -58,6 +62,7 @@ q.cdf(params=c(nmeans=2,df=10),probs=c(.95,1))
 ### Chi Square Distribution
 
 chisq.pdf(params=c(df=10))
+chisq.pdf(params=c(df=10),limits=c(10))
 chisq.pdf(params=c(df=10),limits=c(10,Inf))
 chisq.pdf(params=c(df=10),probs=c(.95,1))
 
