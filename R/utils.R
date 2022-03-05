@@ -26,9 +26,12 @@ calc.pdf <- function(main,fns,params=NULL,limits=c(NULL,NULL),probs=c(NULL,NULL)
     limits <- eval.dist(fns[[1]],probs,params)}
   if(!is.null(limits)) { 
     limits[is.infinite(limits)] <- 99*sign(limits[is.infinite(limits)])
-    xx <- seq(limits[1],limits[2],0.01); px <- c(limits[1],xx,limits[2]); py <- c(0,eval.dist(fns[[3]],xx,params),0)
     yy <- eval.dist(fns[[2]],limits,params)
     area <- round(yy[2]-yy[1],3)}
+  if(length(limits)==1) {
+    px <- limits; py <- eval.dist(fns[[3]],limits,params)}
+  if(length(limits)==2) {
+    xx <- seq(limits[1],limits[2],0.01); px <- c(limits[1],xx,limits[2]); py <- c(0,eval.dist(fns[[3]],xx,params),0)}
   list(main=main,x=x,y=y,px=px,py=py,area=area)
 }
 
@@ -49,7 +52,10 @@ plot.pdf <- function(main,x,y,px=NULL,py=NULL,area=NULL) {
   par(mar=c(7,5,5,2))
   plot(NULL,xlim=range(x),ylim=range(y),bty="l",xlab="",ylab="Probability Density",main=main)
   mtext("Probability Density Function",padj=-1)
-  if(!is.null(px) && !is.null(py)) { 
+  if(length(px)==1) { 
+    lines(c(min(px),min(px)),c(.1*(max(y)-min(y)),min(py)),lty="dashed",col="gray30")
+    text(min(px),0,round(min(px),3),pos=3)}     
+  if(length(px)>1) { 
     polygon(px,py,col='gray90',lty=0)
     text(min(px),0,round(min(px),3),pos=3)
     text(max(px),0,round(max(px),3),pos=3)
