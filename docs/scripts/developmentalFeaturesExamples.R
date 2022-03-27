@@ -5,6 +5,3 @@
 
 source("http://raw.githubusercontent.com/cwendorf/plotDistributions/main/source-plotDistributions.R")
 
-### Normal Distribution
-
-
