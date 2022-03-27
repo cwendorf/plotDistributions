@@ -52,36 +52,36 @@ calc.cdf <- function(main,fns,params=NULL,limits=c(NULL,NULL),probs=c(NULL,NULL)
 
 ### Plotting
 
-plot.pdf <- function(main,x,y,px=NULL,py=NULL,area=NULL) {
+plot.pdf <- function(main,x,y,px=NULL,py=NULL,area=NULL,col="black",bg="gray90") {
   par(mar=c(7,5,5,2))
   plot(NULL,xlim=range(x),ylim=range(y),bty="l",xlab="",ylab="Probability Density",main=main)
   mtext("Probability Density Function",padj=-1)
   if(length(px)==1) { 
-    lines(c(min(px),min(px)),c(.1*(max(y)-min(y)),min(py)),lty="dashed",col="gray30")
-    text(min(px),0,round(min(px),3),pos=3)}     
+    lines(c(min(px),min(px)),c(.1*(max(y)-min(y)),min(py)),lty="dashed",col=col)
+    text(min(px),0,round(min(px),3),pos=3,col=col)}     
   if(length(px)>1) { 
-    polygon(px,py,col='gray90',lty=0)
-    text(min(px),0,round(min(px),3),pos=3)
-    text(max(px),0,round(max(px),3),pos=3)
+    polygon(px,py,col=bg,lty=0)
+    text(min(px),0,round(min(px),3),pos=3,col=col)
+    text(max(px),0,round(max(px),3),pos=3,col=col)
     result <- paste("Shaded Area = ",round(area,3))
-    title(sub=result)}         
-  lines(x,y,col="black")
+    title(sub=result,col.sub=col)}         
+  lines(x,y,col=col)
 }
 
-plot.cdf <- function(main,x,y,limits=NULL,yy=NULL,difference=NULL) {
+plot.cdf <- function(main,x,y,limits=NULL,yy=NULL,difference=NULL,col="black") {
   par(mar=c(7,5,5,2))
   plot(NULL,bty="l",xlim=range(x),ylim=c(0,1),lwd=2,xlab="",ylab="Cumulative Probability",main=main)
   mtext("Cumulative Distribution Function",padj=-1)
   if(!is.null(limits)) { 
-    lines(c(limits[1],limits[1]),c(.1*(max(y)-min(y)),yy[1]),lty="dashed",col="gray30")
-    lines(c(limits[2],limits[2]),c(.1*(max(y)-min(y)),yy[2]),lty="dashed",col="gray30")
-    text(limits[1],0,round(limits[1],3),pos=3)
-    text(limits[2],0,round(limits[2],3),pos=3)
-    lines(c(min(x)+.13*(max(x)-min(x)),limits[1]),c(yy[1],yy[1]),lty="dashed",col="gray30")
-    lines(c(min(x)+.13*(max(x)-min(x)),limits[2]),c(yy[2],yy[2]),lty="dashed",col="gray30")
-    text(min(x),yy[1],round(yy[1],3),pos=4)
-    text(min(x),yy[2],round(yy[2],3),pos=4)
+    lines(c(limits[1],limits[1]),c(.1*(max(y)-min(y)),yy[1]),lty="dashed",col=col)
+    lines(c(limits[2],limits[2]),c(.1*(max(y)-min(y)),yy[2]),lty="dashed",col=col)
+    text(limits[1],0,round(limits[1],3),pos=3,col=col)
+    text(limits[2],0,round(limits[2],3),pos=3,col=col)
+    lines(c(min(x)+.13*(max(x)-min(x)),limits[1]),c(yy[1],yy[1]),lty="dashed",col=col)
+    lines(c(min(x)+.13*(max(x)-min(x)),limits[2]),c(yy[2],yy[2]),lty="dashed",col=col)
+    text(min(x),yy[1],round(yy[1],3),pos=4,col=col)
+    text(min(x),yy[2],round(yy[2],3),pos=4,col=col)
     result <- paste("Difference = ",round(difference,3))
-    if(!is.na(difference)) title(sub=result)}
-  lines(x,y,col="black")
+    if(!is.na(difference)) title(sub=result,col.sub=col)}
+  lines(x,y,col=col)
 }
