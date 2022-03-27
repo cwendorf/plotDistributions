@@ -9,6 +9,10 @@
 
 **plotDistributions** is a small R package for plotting the probability density and cumulative distribution functions for various continuous distributions. It provides functionality to highlight probabilities and display critical values. 
 
+<a href="https://github.com/cwendorf/plotDistributions">
+<p align="center"><kbd><img src="docs/figures/plotDistributionsCoverImage.jpg"></kbd></p>
+</a>
+
 ### Installation
 
 This package is not currently on CRAN, but can be installed from GitHub:
@@ -28,7 +32,10 @@ source("http://raw.githubusercontent.com/cwendorf/plotDistributions/main/source-
 ### Usage
 
 Simple documentation and tutorials are available:  
-[https://github.com/cwendorf/plotDistributions/tree/main/docs](https://github.com/cwendorf/plotDistributions/tree/main/docs) 
+[https://github.com/cwendorf/plotDistributions/tree/main/docs](https://github.com/cwendorf/plotDistributions/tree/main/docs)
+
+- Plots of normal, student, F, studentized range, and chi square distributions
+- Options for probability density functions and cumulative distribution functions
 
 ### Contact Me
 
