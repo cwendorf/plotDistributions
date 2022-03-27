@@ -1,5 +1,7 @@
 # plotDistributions
-## Plotting Utilities
+## Utilities
+
+### Calculations
 
 calc.deriv <- function(fn,p,...){
   dif <- 1e-10
@@ -47,6 +49,8 @@ calc.cdf <- function(main,fns,params=NULL,limits=c(NULL,NULL),probs=c(NULL,NULL)
     difference <- round(yy[2]-yy[1],3)}
   list(main=main,x=x,y=y,limits=limits,yy=yy,difference=difference)  
 }
+
+### Plotting
 
 plot.pdf <- function(main,x,y,px=NULL,py=NULL,area=NULL) {
   par(mar=c(7,5,5,2))
