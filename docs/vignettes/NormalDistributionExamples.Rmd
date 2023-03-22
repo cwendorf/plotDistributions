@@ -1,0 +1,49 @@
+---
+title: "plotDistributions"
+author: "Craig A. Wendorf"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 4
+    collapse: true
+    theme: cerulean
+    highlight: tango
+    keep_md: TRUE
+vignette: >
+  %\VignetteIndexEntry{Normal Distribution Examples}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r,include=FALSE}
+#suppress the warnings and other messages from showing in the knitted file.
+knitr::opts_chunk$set(fig.width=7, fig.height=5,fig.path='figures/',echo=TRUE,warning=FALSE,message=FALSE)
+```
+
+```{r,include=FALSE}
+if(!require(plotDistributions)) {
+if(!require(devtools)) install.packages('devtools')
+devtools::install_github("cwendorf/plotDistributions")}
+library(plotDistributions)
+```
+
+## Normal Distribution Examples
+
+### Probability Density Function
+
+Get Probability Density Function plots that specify no limits, numeric limits, and probability limits, respectively.
+```{r,normPDF}
+norm.pdf()
+norm.pdf(limits=c(1,Inf))
+norm.pdf(probs=c(.025,.975))
+```
+
+### Cumulative Distribution Function
+
+Get Cumulative Distribution Function plots that specify no limits, numeric limits, and probability limits, respectively.
+```{r,normCDF}
+norm.cdf()
+norm.cdf(limits=c(1,Inf))
+norm.cdf(probs=c(.025,.975))
+```

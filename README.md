@@ -31,11 +31,13 @@ source("http://raw.githubusercontent.com/cwendorf/plotDistributions/main/source-
 
 ### Usage
 
-Simple documentation and tutorials are available:  
-[https://github.com/cwendorf/plotDistributions/tree/main/docs](https://github.com/cwendorf/plotDistributions/tree/main/docs)
+This package contains a few set of examples to demonstrate its use:
 
-- Plots of normal, student, F, studentized range, and chi square distributions
-- Options for probability density functions and cumulative distribution functions
+- [Normal Distribution Examples](./docs/NormalDistributionExamples.md)
+- [Student's t Distribution Examples](./docs/StudentsDistributionExamples.md)
+- [F Distribution Examples](./docs/FDistributionExamples.md)
+- [Studentized Range Distribution Examples](./docs/StudentizedRangeDistributionExamples.md)
+- [Chi Square Distribution Examples](./docs/ChiSquareDistributionExamples.md)
 
 ### Contact Me
 
