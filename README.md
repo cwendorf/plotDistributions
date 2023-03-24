@@ -33,7 +33,7 @@ source("http://raw.githubusercontent.com/cwendorf/plotDistributions/main/source-
 
 The [Examples for plotDistributions](./docs/README.md) provide basic documentation and examples of:
 
-- Probability density and cummulative distribution functions for the Normal, Student's t, Chi Sqwaure, Studentized Range, and F distributions
+- Probability density and cummulative distribution functions for the Normal, Student's t, Chi Square, Studentized Range, and F distributions
 - Examples with and without displayed critical values and highlighted probabilities
 
 ### Contact Me
