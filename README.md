@@ -30,10 +30,13 @@ source("http://raw.githubusercontent.com/cwendorf/plotDistributions/main/source-
 
 ### Usage
 
-The [Examples for plotDistributions](./docs/README.md) provide basic documentation and examples of:
+This package contains a set of examples to demonstrate its use:
 
-- Probability density and cummulative distribution functions for the Normal, Student's t, Chi Square, Studentized Range, and F distributions
-- Examples with and without displayed critical values and highlighted probabilities
+- [*Normal Distribution Examples*](./docs/NormalDistributionExamples.md)
+- [*Student's t Distribution Examples*](./docs/StudentsDistributionExamples.md)
+- [*F Distribution Examples*](./docs/FDistributionExamples.md)
+- [*Studentized Range Distribution Examples*](./docs/StudentizedRangeDistributionExamples.md)
+- [*Chi Square Distribution Examples*](./docs/ChiSquareDistributionExamples.md)
 
 ### Contact Me
 
