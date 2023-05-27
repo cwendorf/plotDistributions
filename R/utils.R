@@ -58,7 +58,7 @@ plot.pdf <- function(main,x,y,px=NULL,py=NULL,area=NULL,col="black",bg="gray90")
   mtext("Probability Density Function",padj=-1)
   if(length(px)==1) { 
     lines(c(min(px),min(px)),c(.05*(max(y)-min(y)),min(py)),lty="dashed",col=col)
-    text(min(px),0,round(min(px),3),pos=3,col=col)}     
+    text(min(px),0,round(min(px),3),pos=3,offset=-.25,col=col)}     
   if(length(px)>1) { 
     polygon(px,py,col=bg,lty=0)
     text(min(px),0,round(min(px),3),pos=3,offset=-.25,col=col)
