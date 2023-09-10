@@ -1,5 +1,9 @@
 # plotDistributions
 
+## Developmental Version
+
+- Added vignettes
+
 ## plotDistributions 0.1.220303
 
 - Initial release
