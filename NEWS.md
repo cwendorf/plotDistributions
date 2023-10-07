@@ -1,8 +1,10 @@
 # plotDistributions
 
-## Developmental Version
+## plotDistributions 1.0.231007
 
-- Added vignettes
+- Added vignettes to demonstrate distributions
+- Updated color handling
+- Readjusted label points
 
 ## plotDistributions 0.1.220303
 
