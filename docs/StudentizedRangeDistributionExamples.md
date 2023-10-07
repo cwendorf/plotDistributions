@@ -1,23 +1,29 @@
 
 ## Studentized Range Distribution Examples
 
+- [Probability Density Function](#probability-density-function)
+- [Cumulative Distribution Function](#cumulative-distribution-function)
+
+------------------------------------------------------------------------
+
 ### Probability Density Function
 
-Get Probability Density Function plots that specify no limits, numeric limits, and probability limits, respectively.
+Get Probability Density Function plots that specify no limits, numeric
+limits, and probability limits, respectively.
 
-```r
+``` r
 q.pdf(params=c(nmeans=2,df=10))
 ```
 
 ![](figures/qPDF-1.png)<!-- -->
 
-```r
+``` r
 q.pdf(params=c(nmeans=2,df=10),limits=c(2))
 ```
 
 ![](figures/qPDF-2.png)<!-- -->
 
-```r
+``` r
 q.pdf(params=c(nmeans=2,df=10),probs=c(.95,1))
 ```
 
@@ -25,21 +31,22 @@ q.pdf(params=c(nmeans=2,df=10),probs=c(.95,1))
 
 ### Cumulative Distribution Function
 
-Get Cumulative Distribution Function plots that specify no limits, numeric limits, and probability limits, respectively.
+Get Cumulative Distribution Function plots that specify no limits,
+numeric limits, and probability limits, respectively.
 
-```r
+``` r
 q.cdf(params=c(nmeans=2,df=10))
 ```
 
 ![](figures/qCDF-1.png)<!-- -->
 
-```r
+``` r
 q.cdf(params=c(nmeans=2,df=10),limits=c(2))
 ```
 
 ![](figures/qCDF-2.png)<!-- -->
 
-```r
+``` r
 q.cdf(params=c(nmeans=2,df=10),probs=c(.95,1))
 ```
 

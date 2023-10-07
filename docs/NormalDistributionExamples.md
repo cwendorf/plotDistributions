@@ -1,23 +1,29 @@
 
 ## Normal Distribution Examples
 
+- [Probability Density Function](#probability-density-function)
+- [Cumulative Distribution Function](#cumulative-distribution-function)
+
+------------------------------------------------------------------------
+
 ### Probability Density Function
 
-Get Probability Density Function plots that specify no limits, numeric limits, and probability limits, respectively.
+Get Probability Density Function plots that specify no limits, numeric
+limits, and probability limits, respectively.
 
-```r
+``` r
 norm.pdf()
 ```
 
 ![](figures/normPDF-1.png)<!-- -->
 
-```r
+``` r
 norm.pdf(limits=c(1,Inf))
 ```
 
 ![](figures/normPDF-2.png)<!-- -->
 
-```r
+``` r
 norm.pdf(probs=c(.025,.975))
 ```
 
@@ -25,21 +31,22 @@ norm.pdf(probs=c(.025,.975))
 
 ### Cumulative Distribution Function
 
-Get Cumulative Distribution Function plots that specify no limits, numeric limits, and probability limits, respectively.
+Get Cumulative Distribution Function plots that specify no limits,
+numeric limits, and probability limits, respectively.
 
-```r
+``` r
 norm.cdf()
 ```
 
 ![](figures/normCDF-1.png)<!-- -->
 
-```r
+``` r
 norm.cdf(limits=c(1,Inf))
 ```
 
 ![](figures/normCDF-2.png)<!-- -->
 
-```r
+``` r
 norm.cdf(probs=c(.025,.975))
 ```
 

@@ -1,23 +1,29 @@
 
 ## Chi Square Distribution Examples
 
+- [Probability Density Function](#probability-density-function)
+- [Cumulative Distribution Function](#cumulative-distribution-function)
+
+------------------------------------------------------------------------
+
 ### Probability Density Function
 
-Get Probability Density Function plots that specify no limits, numeric limits, and probability limits, respectively.
+Get Probability Density Function plots that specify no limits, numeric
+limits, and probability limits, respectively.
 
-```r
+``` r
 chisq.pdf(params=c(df=10))
 ```
 
 ![](figures/chisqPDF-1.png)<!-- -->
 
-```r
+``` r
 chisq.pdf(params=c(df=10),limits=c(10))
 ```
 
 ![](figures/chisqPDF-2.png)<!-- -->
 
-```r
+``` r
 chisq.pdf(params=c(df=10),probs=c(.95,1))
 ```
 
@@ -25,21 +31,22 @@ chisq.pdf(params=c(df=10),probs=c(.95,1))
 
 ### Cumulative Distribution Function
 
-Get Cumulative Distribution Function plots that specify no limits, numeric limits, and probability limits, respectively.
+Get Cumulative Distribution Function plots that specify no limits,
+numeric limits, and probability limits, respectively.
 
-```r
+``` r
 chisq.cdf(params=c(df=10))
 ```
 
 ![](figures/chisqCDF-1.png)<!-- -->
 
-```r
+``` r
 chisq.cdf(params=c(df=10),limits=c(10))
 ```
 
 ![](figures/chisqCDF-2.png)<!-- -->
 
-```r
+``` r
 chisq.cdf(params=c(df=10),probs=c(.95,1))
 ```
 
