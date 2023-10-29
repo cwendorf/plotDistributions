@@ -10,15 +10,16 @@ vignette: >
 ---
 
 ```{r,include=FALSE}
-#suppress the warnings and other messages from showing in the knitted file.
-knitr::opts_chunk$set(fig.width=7, fig.height=5,fig.path='figures/',echo=TRUE,warning=FALSE,message=FALSE)
-devtools::source_gist("8e6e5dc401e3fc1042ef7a030f9d19c7",filename='revised_toc.R')
+# suppress the warnings and other messages from showing in the knitted file.
+knitr::opts_chunk$set(fig.width = 7, fig.height = 5, fig.path = "figures/", echo = TRUE, warning = FALSE, message = FALSE)
+devtools::source_gist("8e6e5dc401e3fc1042ef7a030f9d19c7", filename = "revised_toc.R")
 ```
 
 ```{r,include=FALSE}
-if(!require(plotDistributions)) {
-if(!require(remotes)) install.packages('remotes')
-remotes::install_github("cwendorf/plotDistributions")}
+if (!require(plotDistributions)) {
+  if (!require(remotes)) install.packages("remotes")
+  remotes::install_github("cwendorf/plotDistributions")
+}
 library(plotDistributions)
 ```
 
@@ -26,7 +27,7 @@ library(plotDistributions)
 
 ```{r toc, echo=FALSE}
 thisfile <- knitr::current_input()
-revised_toc(thisfile,base_level=3,toc_depth=4)
+revised_toc(thisfile, base_level = 3, toc_depth = 4)
 ```
 
 ---
@@ -35,16 +36,16 @@ revised_toc(thisfile,base_level=3,toc_depth=4)
 
 Get Probability Density Function plots that specify no limits, numeric limits, and probability limits, respectively.
 ```{r,qPDF}
-q.pdf(params=c(nmeans=2,df=10))
-q.pdf(params=c(nmeans=2,df=10),limits=c(2))
-q.pdf(params=c(nmeans=2,df=10),probs=c(.95,1))
+q.pdf(params = c(nmeans = 2, df = 10))
+q.pdf(params = c(nmeans = 2, df = 10), limits = c(2))
+q.pdf(params = c(nmeans = 2, df = 10), probs = c(.95, 1))
 ```
 
 ### Cumulative Distribution Function
 
 Get Cumulative Distribution Function plots that specify no limits, numeric limits, and probability limits, respectively.
 ```{r,qCDF}
-q.cdf(params=c(nmeans=2,df=10))
-q.cdf(params=c(nmeans=2,df=10),limits=c(2))
-q.cdf(params=c(nmeans=2,df=10),probs=c(.95,1))
+q.cdf(params = c(nmeans = 2, df = 10))
+q.cdf(params = c(nmeans = 2, df = 10), limits = c(2))
+q.cdf(params = c(nmeans = 2, df = 10), probs = c(.95, 1))
 ```
