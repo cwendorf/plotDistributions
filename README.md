@@ -44,7 +44,7 @@ This package contains a set of examples to demonstrate its use:
 
 - GitHub Issues: [https://github.com/cwendorf/plotDistributions/issues](https://github.com/cwendorf/plotDistributions/issues) 
 - Author Email: [cwendorf@uwsp.edu](mailto:cwendorf@uwsp.edu)
-- Author Homepage: [https://cwendorf.github.io](https://cwendorf.github.io)
+- Author Homepage: [https://www.uwsp.edu/directory/profile/craig-wendorf/](https://www.uwsp.edu/directory/profile/craig-wendorf/)
 
 ### Citation
 
