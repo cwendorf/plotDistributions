@@ -34,11 +34,11 @@ source("http://raw.githubusercontent.com/cwendorf/plotDistributions/main/source-
 
 This package contains a set of examples to demonstrate its use:
 
-- [*Normal Distribution Examples*](./docs/NormalDistributionExamples.md)
-- [*Student's t Distribution Examples*](./docs/StudentsDistributionExamples.md)
-- [*F Distribution Examples*](./docs/FDistributionExamples.md)
-- [*Studentized Range Distribution Examples*](./docs/StudentizedRangeDistributionExamples.md)
-- [*Chi Square Distribution Examples*](./docs/ChiSquareDistributionExamples.md)
+- [Normal Distribution Examples](./docs/NormalDistributionExamples.md)
+- [Student's t Distribution Examples](./docs/StudentsDistributionExamples.md)
+- [F Distribution Examples](./docs/FDistributionExamples.md)
+- [Studentized Range Distribution Examples](./docs/StudentizedRangeDistributionExamples.md)
+- [Chi Square Distribution Examples](./docs/ChiSquareDistributionExamples.md)
 
 ### Contact Me
 
