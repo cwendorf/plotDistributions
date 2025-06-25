@@ -1,73 +1,19 @@
 # plotDistributions
-## Utilities
+## Plotting Helpers
 
-### Calculations
-
-calc.deriv <- function(fn, p, ...) {
-  dif <- 1e-10
-  p1 <- fn(p, ...)
-  p2 <- fn(p + dif, ...)
-  slope <- (p2 - p1) / dif
-  return(slope)
-}
-
-dtukey <- function(x, nmeans, df, nranges = 1, lower.tail = TRUE, log.p = FALSE) {
-  calc.deriv(ptukey, x, nmeans, df, nranges, lower.tail, log.p)
-}
-
-eval.dist <- function(fn, x, params) {
-  args <- c(list(x), as.list(params))
-  do.call(fn, args)
-}
-
-calc.pdf <- function(main, fns, params = NULL, limits = c(NULL, NULL), probs = c(NULL, NULL)) {
-  lb <- eval.dist(fns[[1]], .0005, params)
-  ub <- eval.dist(fns[[1]], .9995, params)
-  x <- seq(lb, ub, len = 1000)
-  y <- eval.dist(fns[[3]], x, params)
-  px <- NULL
-  py <- NULL
-  area <- NULL
-  if (!is.null(probs)) {
-    limits <- eval.dist(fns[[1]], probs, params)
-  }
-  if (!is.null(limits)) {
-    limits[is.infinite(limits)] <- 99 * sign(limits[is.infinite(limits)])
-    yy <- eval.dist(fns[[2]], limits, params)
-    area <- round(yy[2] - yy[1], 3)
-  }
-  if (length(limits) == 1) {
-    px <- limits
-    py <- eval.dist(fns[[3]], limits, params)
-  }
-  if (length(limits) == 2) {
-    xx <- seq(limits[1], limits[2], 0.01)
-    px <- c(limits[1], xx, limits[2])
-    py <- c(0, eval.dist(fns[[3]], xx, params), 0)
-  }
-  list(main = main, x = x, y = y, px = px, py = py, area = area)
-}
-
-calc.cdf <- function(main, fns, params = NULL, limits = c(NULL, NULL), probs = c(NULL, NULL)) {
-  lb <- eval.dist(fns[[1]], .0005, params)
-  ub <- eval.dist(fns[[1]], .9995, params)
-  x <- seq(lb, ub, len = 1000)
-  y <- eval.dist(fns[[2]], x, params)
-  yy <- NULL
-  difference <- NULL
-  if (!is.null(probs)) {
-    limits <- eval.dist(fns[[1]], probs, params)
-  }
-  if (!is.null(limits)) {
-    limits[is.infinite(limits)] <- 99 * sign(limits[is.infinite(limits)])
-    yy <- eval.dist(fns[[2]], limits, params)
-    difference <- round(yy[2] - yy[1], 3)
-  }
-  list(main = main, x = x, y = y, limits = limits, yy = yy, difference = difference)
-}
-
-### Plotting
-
+#' Plot a Probability Density Function
+#'
+#' Internal plotting utility for visualizing a probability density function (PDF) with optional shaded regions and annotations.
+#'
+#' @param main The main title of the plot.
+#' @param x A vector of x-values for the PDF curve.
+#' @param y A vector of y-values for the PDF curve.
+#' @param px Optional vector of x-values defining the shaded area.
+#' @param py Optional vector of y-values corresponding to `px`.
+#' @param area Optional numeric value representing the shaded area.
+#' @param col Color for lines and text.
+#' @param bg Background color for shaded area.
+#' @noRd
 plot.pdf <- function(main, x, y, px = NULL, py = NULL, area = NULL, col = "black", bg = "gray90") {
   par(mar = c(7, 5, 5, 2))
   plot(NULL, xlim = range(x), ylim = range(y), bty = "l", xlab = "", ylab = "Probability Density", main = main)
@@ -86,6 +32,18 @@ plot.pdf <- function(main, x, y, px = NULL, py = NULL, area = NULL, col = "black
   lines(x, y, col = col)
 }
 
+#' Plot a Cumulative Distribution Function
+#'
+#' Internal plotting utility for visualizing a cumulative distribution function (CDF) with optional annotations and shaded differences.
+#'
+#' @param main The main title of the plot.
+#' @param x A vector of x-values for the CDF curve.
+#' @param y A vector of y-values for the CDF curve.
+#' @param limits Optional vector of x-limits for vertical markers.
+#' @param yy Optional y-values corresponding to `limits`.
+#' @param difference Optional numeric value representing a difference in CDF values.
+#' @param col Color for lines and text.
+#' @noRd
 plot.cdf <- function(main, x, y, limits = NULL, yy = NULL, difference = NULL, col = "black") {
   par(mar = c(7, 5, 5, 2))
   plot(NULL, bty = "l", xlim = range(x), ylim = c(0, 1), lwd = 2, xlab = "", ylab = "Cumulative Probability", main = main)

@@ -1,5 +1,9 @@
 # plotDistributions
 
+## plotDistribution 1.1.250625
+
+- Added documentation to functions
+
 ## plotDistributions 1.0.231007
 
 - Added vignettes to demonstrate distributions
