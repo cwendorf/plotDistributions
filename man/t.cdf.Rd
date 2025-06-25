@@ -4,7 +4,7 @@
 \alias{t.cdf}
 \title{Plot the CDF of the Student's t-Distribution}
 \usage{
-\method{t}{cdf}(params = NULL, limits = c(NULL, NULL), probs = c(NULL, NULL), ...)
+t.cdf(params = NULL, limits = c(NULL, NULL), probs = c(NULL, NULL), ...)
 }
 \arguments{
 \item{params}{Optional list of parameters for the distribution (e.g., degrees of freedom `df`).}
