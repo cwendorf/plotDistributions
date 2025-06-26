@@ -1,5 +1,5 @@
 # plotDistributions
-## plotDistributions Cover Image
+## Cover Image Examples
 
 source("http://raw.githubusercontent.com/cwendorf/plotDistributions/main/source-plotDistributions.R")
 
