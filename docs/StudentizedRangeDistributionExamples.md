@@ -1,3 +1,4 @@
+# [`plotDistributions`](https://github.com/cwendorf/plotDistributions/)
 
 ## Studentized Range Distribution Examples
 

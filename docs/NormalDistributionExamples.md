@@ -1,3 +1,4 @@
+# [`plotDistributions`](https://github.com/cwendorf/plotDistributions/)
 
 ## Normal Distribution Examples
 

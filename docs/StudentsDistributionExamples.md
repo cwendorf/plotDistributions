@@ -1,3 +1,4 @@
+# [`plotDistributions`](https://github.com/cwendorf/plotDistributions/)
 
 ## Student’s t Distribution Examples
 
