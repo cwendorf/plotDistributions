@@ -10,9 +10,7 @@
 
 `plotDistributions` is a small R package for plotting the probability density and cumulative distribution functions for various continuous distributions. It provides functionality to highlight probabilities and display critical values. 
 
-<a href="https://github.com/cwendorf/plotDistributions">
-<p align="center"><kbd><img src="docs/figures/CoverImage.jpg"></kbd></p>
-</a>
+![Screenshot of plotDistributions Output](./docs/figures/CoverImage.jpg)
 
 ### Installation
 
