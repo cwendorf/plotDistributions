@@ -1,0 +1,53 @@
+---
+subtitle: "Overlay Distribution Examples"
+output:
+  github_document:
+    preserve_yaml: FALSE
+vignette: >
+  %\VignetteIndexEntry{Overlay Distribution Examples}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r,include=FALSE}
+# suppress the warnings and other messages from showing in the knitted file.
+knitr::opts_chunk$set(fig.width = 7, fig.height = 5, fig.path = "figures/", echo = TRUE, warning = FALSE, message = FALSE)
+devtools::source_gist("8e6e5dc401e3fc1042ef7a030f9d19c7", filename = "revised_toc.R")
+```
+
+```{r,include=FALSE}
+if (!require(plotDistributions)) {
+  if (!require(remotes)) install.packages("remotes")
+  remotes::install_github("cwendorf/plotDistributions")
+}
+library(plotDistributions)
+```
+
+## Overlay Distribution Examples
+
+```{r toc, echo=FALSE}
+thisfile <- knitr::current_input()
+revised_toc(thisfile, base_level = 3, toc_depth = 4)
+```
+
+---
+
+### Overlay PDFs: Two t Distributions
+
+Plot two Student's t distributions with different degrees of freedom on a shared axis.
+```{r,overlayTPDF}
+overlay.pdf(list(
+  list(name = "t df=5",  fns = c(qt, pt, dt), params = c(df = 5)),
+  list(name = "t df=20", fns = c(qt, pt, dt), params = c(df = 20))
+), main = "Two t Distributions")
+```
+
+### Overlay CDFs: t vs Normal
+
+Compare a t distribution to the standard normal on the cumulative scale.
+```{r,overlayTCDF}
+overlay.cdf(list(
+  list(name = "t df=8", fns = c(qt, pt, dt), params = c(df = 8)),
+  list(name = "Normal", fns = c(qnorm, pnorm, dnorm))
+), main = "t vs z Distributions")
+```
