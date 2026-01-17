@@ -8,13 +8,14 @@
 #' @param params Optional list of parameters for the distribution (e.g., `size`, `prob`).
 #' @param limits Optional numeric vector of lower and upper bounds for shading a region under the curve.
 #' @param probs Optional numeric vector of probabilities to be converted to limits.
+#' @param width Width of the bars (default is 0.8). Values between 0 and 1 control the bar width.
 #' @param ... Additional graphical parameters passed to the plotting function.
 #'
 #' @return A plot is produced. Invisibly returns `NULL`.
 #' @export
-binom.pdf <- function(params = NULL, limits = c(NULL, NULL), probs = c(NULL, NULL), ...) {
+binom.pdf <- function(params = NULL, limits = c(NULL, NULL), probs = c(NULL, NULL), width = 0.8, ...) {
   calc <- calc.pdf(main = "Binomial Distribution", fns = c(qbinom, pbinom, dbinom), params = params, limits = limits, probs = probs)
-  do.call(plot.pdf, c(calc, ...))
+  do.call(plot.pdf, c(calc, list(width = width), ...))
 }
 
 #' Plot the CDF of the Binomial Distribution
