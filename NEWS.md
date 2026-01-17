@@ -1,5 +1,10 @@
 # plotDistributions
 
+## Pending
+
+- Added binomial distribution support
+- Added functions to create overlay plots
+
 ## plotDistribution 1.1.250625
 
 - Added documentation to functions
