@@ -58,7 +58,13 @@ eval.dist <- function(fn, x, params) {
 calc.pdf <- function(main, fns, params = NULL, limits = c(NULL, NULL), probs = c(NULL, NULL)) {
   lb <- eval.dist(fns[[1]], .0005, params)
   ub <- eval.dist(fns[[1]], .9995, params)
-  x <- seq(lb, ub, len = 1000)
+  # Detect discrete (binomial) PDF to avoid non-integer evaluations
+  is_discrete <- identical(fns[[3]], dbinom)
+  if (is_discrete) {
+    x <- seq(floor(lb), ceiling(ub), by = 1)
+  } else {
+    x <- seq(lb, ub, len = 1000)
+  }
   y <- eval.dist(fns[[3]], x, params)
   px <- NULL
   py <- NULL
@@ -70,15 +76,35 @@ calc.pdf <- function(main, fns, params = NULL, limits = c(NULL, NULL), probs = c
     limits[is.infinite(limits)] <- 99 * sign(limits[is.infinite(limits)])
     yy <- eval.dist(fns[[2]], limits, params)
     area <- round(yy[2] - yy[1], 3)
+    # For discrete binomial, ensure inclusive integer range probability
+    if (is_discrete && length(limits) == 2) {
+      L <- ceiling(limits[1])
+      U <- floor(limits[2])
+      # Use CDF difference with lower endpoint inclusive: P(L <= X <= U) = F(U) - F(L-1)
+      FyU <- eval.dist(fns[[2]], U, params)
+      FyLm1 <- eval.dist(fns[[2]], L - 1, params)
+      area <- round(FyU - FyLm1, 3)
+    }
   }
   if (length(limits) == 1) {
-    px <- limits
-    py <- eval.dist(fns[[3]], limits, params)
+    if (is_discrete) {
+      k <- as.integer(round(limits))
+      px <- k
+      py <- eval.dist(fns[[3]], k, params)
+    } else {
+      px <- limits
+      py <- eval.dist(fns[[3]], limits, params)
+    }
   }
   if (length(limits) == 2) {
-    xx <- seq(limits[1], limits[2], 0.01)
-    px <- c(limits[1], xx, limits[2])
-    py <- c(0, eval.dist(fns[[3]], xx, params), 0)
+    if (is_discrete) {
+      px <- seq(ceiling(limits[1]), floor(limits[2]), by = 1)
+      py <- NULL
+    } else {
+      xx <- seq(limits[1], limits[2], 0.01)
+      px <- c(limits[1], xx, limits[2])
+      py <- c(0, eval.dist(fns[[3]], xx, params), 0)
+    }
   }
   list(main = main, x = x, y = y, px = px, py = py, area = area)
 }
