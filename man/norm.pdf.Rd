@@ -7,7 +7,7 @@
 norm.pdf(params = NULL, limits = c(NULL, NULL), probs = c(NULL, NULL), ...)
 }
 \arguments{
-\item{params}{Optional list of parameters for the distribution (e.g., `mean`, `sd`).}
+\item{params}{Optional list of parameters for the distribution (e.g., \code{mean}, \code{sd}).}
 
 \item{limits}{Optional numeric vector specifying the lower and upper bounds for shading.}
 
@@ -16,7 +16,7 @@ norm.pdf(params = NULL, limits = c(NULL, NULL), probs = c(NULL, NULL), ...)
 \item{...}{Additional graphical parameters passed to the plotting function.}
 }
 \value{
-A plot is produced. Invisibly returns `NULL`.
+A plot is produced. Invisibly returns \code{NULL}.
 }
 \description{
 Generates a plot of the probability density function (PDF) for the normal distribution, with optional shaded regions defined by limits or quantiles.

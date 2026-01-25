@@ -16,7 +16,7 @@ q.cdf(params = NULL, limits = c(NULL, NULL), probs = c(NULL, NULL), ...)
 \item{...}{Additional graphical parameters passed to the plotting function.}
 }
 \value{
-A plot is produced. Invisibly returns `NULL`.
+A plot is produced. Invisibly returns \code{NULL}.
 }
 \description{
 Generates a plot of the cumulative distribution function (CDF) for the Studentized range distribution, optionally highlighting probability differences between specified limits or quantiles.

@@ -4,10 +4,10 @@
 \alias{t.pdf}
 \title{Plot the PDF of the Student's t-Distribution}
 \usage{
-t.pdf(params = NULL, limits = c(NULL, NULL), probs = c(NULL, NULL), ...)
+\method{t}{pdf}(params = NULL, limits = c(NULL, NULL), probs = c(NULL, NULL), ...)
 }
 \arguments{
-\item{params}{Optional list of parameters for the distribution (e.g., degrees of freedom `df`).}
+\item{params}{Optional list of parameters for the distribution (e.g., degrees of freedom \code{df}).}
 
 \item{limits}{Optional numeric vector of lower and upper bounds for shading a region under the curve.}
 
@@ -16,7 +16,7 @@ t.pdf(params = NULL, limits = c(NULL, NULL), probs = c(NULL, NULL), ...)
 \item{...}{Additional graphical parameters passed to the plotting function.}
 }
 \value{
-A plot is produced. Invisibly returns `NULL`.
+A plot is produced. Invisibly returns \code{NULL}.
 }
 \description{
 Generates a plot of the probability density function (PDF) for the Student's t-distribution, with optional shaded area between specified limits or quantiles.

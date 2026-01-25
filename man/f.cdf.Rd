@@ -7,7 +7,7 @@
 f.cdf(params = NULL, limits = c(NULL, NULL), probs = c(NULL, NULL), ...)
 }
 \arguments{
-\item{params}{Optional list of parameters for the distribution (e.g., `df1`, `df2`).}
+\item{params}{Optional list of parameters for the distribution (e.g., \code{df1}, \code{df2}).}
 
 \item{limits}{Optional numeric vector specifying the lower and upper bounds for annotations.}
 
@@ -16,7 +16,7 @@ f.cdf(params = NULL, limits = c(NULL, NULL), probs = c(NULL, NULL), ...)
 \item{...}{Additional graphical parameters passed to the plotting function.}
 }
 \value{
-A plot is produced. Invisibly returns `NULL`.
+A plot is produced. Invisibly returns \code{NULL}.
 }
 \description{
 Generates a plot of the cumulative distribution function (CDF) for the F distribution, optionally annotating cumulative probability differences between specified limits or quantiles.

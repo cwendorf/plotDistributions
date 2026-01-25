@@ -7,7 +7,7 @@
 chisq.cdf(params = NULL, limits = c(NULL, NULL), probs = c(NULL, NULL), ...)
 }
 \arguments{
-\item{params}{Optional list of parameters for the distribution (e.g., degrees of freedom `df`).}
+\item{params}{Optional list of parameters for the distribution (e.g., degrees of freedom \code{df}).}
 
 \item{limits}{Optional numeric vector specifying the lower and upper bounds for annotations.}
 
@@ -16,7 +16,7 @@ chisq.cdf(params = NULL, limits = c(NULL, NULL), probs = c(NULL, NULL), ...)
 \item{...}{Additional graphical parameters passed to the plotting function.}
 }
 \value{
-A plot is produced. Invisibly returns `NULL`.
+A plot is produced. Invisibly returns \code{NULL}.
 }
 \description{
 Generates a plot of the cumulative distribution function (CDF) for the chi-squared distribution, with optional annotations showing cumulative probability differences between limits or quantiles.

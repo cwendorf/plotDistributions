@@ -4,10 +4,10 @@
 \alias{t.cdf}
 \title{Plot the CDF of the Student's t-Distribution}
 \usage{
-t.cdf(params = NULL, limits = c(NULL, NULL), probs = c(NULL, NULL), ...)
+\method{t}{cdf}(params = NULL, limits = c(NULL, NULL), probs = c(NULL, NULL), ...)
 }
 \arguments{
-\item{params}{Optional list of parameters for the distribution (e.g., degrees of freedom `df`).}
+\item{params}{Optional list of parameters for the distribution (e.g., degrees of freedom \code{df}).}
 
 \item{limits}{Optional numeric vector of lower and upper bounds to evaluate and highlight on the CDF.}
 
@@ -16,7 +16,7 @@ t.cdf(params = NULL, limits = c(NULL, NULL), probs = c(NULL, NULL), ...)
 \item{...}{Additional graphical parameters passed to the plotting function.}
 }
 \value{
-A plot is produced. Invisibly returns `NULL`.
+A plot is produced. Invisibly returns \code{NULL}.
 }
 \description{
 Generates a plot of the cumulative distribution function (CDF) for the Student's t-distribution, with optional visual indicators of probability differences between specified limits or quantiles.

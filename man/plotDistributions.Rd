@@ -9,11 +9,19 @@
 plotDistributions provides functions to plot and visualize continuous distributions.
 }
 \details{
-plotDistributions is a small R package for plotting the probability density and 
-cumulative distribution functions for various continuous distributions. 
+plotDistributions is a small R package for plotting the probability density and
+cumulative distribution functions for various continuous distributions.
 It provides functionality to highlight probabilities and display critical values.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/cwendorf/plotDistributions}
+  \item Report bugs at \url{https://github.com/cwendorf/plotDistributions/issues}
+}
+
+}
 \author{
-**Maintainer**: Craig Wendorf 
+\strong{Maintainer}: Craig Wendorf
 \email{cwendorf@uwsp.edu}
 }
