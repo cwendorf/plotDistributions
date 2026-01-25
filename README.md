@@ -37,6 +37,7 @@ This package contains a set of examples to demonstrate its use:
 - [F Distribution Examples](./docs/FDistributionExamples.md)
 - [Studentized Range Distribution Examples](./docs/StudentizedRangeDistributionExamples.md)
 - [Chi Square Distribution Examples](./docs/ChiSquareDistributionExamples.md)
+- [Binomial Distribution Examples](./docs/BinomialDistributionExamples.md)
 
 ### Contact Me
 
