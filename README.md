@@ -30,7 +30,7 @@ source("http://raw.githubusercontent.com/cwendorf/plotDistributions/main/source-
 
 ### Usage
 
-This package contains a set of examples to demonstrate its use:
+This package contains a set of materials to demonstrate its use:
 
 - [Normal Distribution Examples](./docs/NormalDistributionExamples.md)
 - [Student's t Distribution Examples](./docs/StudentsDistributionExamples.md)
