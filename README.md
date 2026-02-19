@@ -39,7 +39,7 @@ This package contains a set of materials to demonstrate its use:
 - [Chi Square Distribution Examples](./docs/ChiSquareDistributionExamples.md)
 - [Binomial Distribution Examples](./docs/BinomialDistributionExamples.md)
 
-### Contact Me
+### Contact
 
 - GitHub Issues: [https://github.com/cwendorf/plotDistributions/issues](https://github.com/cwendorf/plotDistributions/issues) 
 - Author Email: [cwendorf@uwsp.edu](mailto:cwendorf@uwsp.edu)
