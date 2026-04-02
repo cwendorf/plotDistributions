@@ -21,3 +21,8 @@ A plot is produced. Invisibly returns \code{NULL}.
 \description{
 Generates a plot of the cumulative distribution function (CDF) for the Studentized range distribution, optionally highlighting probability differences between specified limits or quantiles.
 }
+\examples{
+q.cdf(params = c(nmeans = 2, df = 10))
+q.cdf(params = c(nmeans = 2, df = 10), limits = c(2, Inf))
+q.cdf(params = c(nmeans = 2, df = 10), probs = c(.95, 1))
+}

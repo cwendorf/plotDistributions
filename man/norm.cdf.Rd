@@ -21,3 +21,8 @@ A plot is produced. Invisibly returns \code{NULL}.
 \description{
 Generates a plot of the cumulative distribution function (CDF) for the normal distribution, optionally highlighting cumulative probability differences between bounds or quantiles.
 }
+\examples{
+norm.cdf()
+norm.cdf(limits = c(1, Inf))
+norm.cdf(probs = c(.025, .975))
+}

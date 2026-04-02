@@ -21,3 +21,8 @@ A plot is produced. Invisibly returns \code{NULL}.
 \description{
 Generates a plot of the probability density function (PDF) for the chi-squared distribution, with optional shading between specified limits or quantiles.
 }
+\examples{
+chisq.pdf(params = c(df = 10))
+chisq.pdf(params = c(df = 10), limits = c(10, Inf))
+chisq.pdf(params = c(df = 10), probs = c(.95, 1))
+}

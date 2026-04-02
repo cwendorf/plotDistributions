@@ -21,3 +21,8 @@ A plot is produced. Invisibly returns \code{NULL}.
 \description{
 Generates a plot of the cumulative distribution function (CDF) for the binomial distribution, with optional visual indicators of probability differences between specified limits or quantiles.
 }
+\examples{
+binom.cdf(params = c(size = 10, prob = .5))
+binom.cdf(params = c(size = 10, prob = .5), limits = c(4, 7))
+binom.cdf(params = c(size = 10, prob = .5), probs = c(.2, .8))
+}

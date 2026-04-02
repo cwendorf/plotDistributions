@@ -10,7 +10,7 @@
 
 `plotDistributions` is a small R package for plotting the probability density and cumulative distribution functions for various continuous distributions. It provides functionality to highlight probabilities and display critical values. 
 
-![Screenshot of plotDistributions Output](./docs/figures/CoverImage.jpg)
+![Screenshot of plotDistributions Output](./docs/vignettes/figures/CoverImage.jpg)
 
 ### Installation
 
@@ -30,14 +30,11 @@ source("http://raw.githubusercontent.com/cwendorf/plotDistributions/main/source-
 
 ### Usage
 
-This package contains a set of materials to demonstrate its use:
+This package includes the following documentation:
 
-- [Normal Distribution Examples](./docs/NormalDistributionExamples.md)
-- [Student's t Distribution Examples](./docs/StudentsDistributionExamples.md)
-- [F Distribution Examples](./docs/FDistributionExamples.md)
-- [Studentized Range Distribution Examples](./docs/StudentizedRangeDistributionExamples.md)
-- [Chi Square Distribution Examples](./docs/ChiSquareDistributionExamples.md)
-- [Binomial Distribution Examples](./docs/BinomialDistributionExamples.md)
+- [Introduction](./docs/README.md):  Overview of the package and links to all resources.
+- [Reference](./docs/man/README.md): Documentation for all exported functions, including usage, arguments, and return values.
+- [Articles](./docs/vignettes/README.md): Examples demonstrating how to use the package.
 
 ### Contact
 

@@ -29,3 +29,8 @@ A plot is produced. Invisibly returns \code{NULL}.
 \description{
 Generates a plot of the probability mass function (treated as a PDF) for the binomial distribution, with optional shaded area between specified limits or quantiles.
 }
+\examples{
+binom.pdf(params = c(size = 10, prob = .5))
+binom.pdf(params = c(size = 10, prob = .5), limits = c(4, 7))
+binom.pdf(params = c(size = 10, prob = .5), probs = c(.2, .8))
+}
