@@ -32,4 +32,4 @@ This section is the reference for backcalc. Each page documents one exported fun
 ### Student's t Distribution
 
 - [t.cdf](./t.cdf.md): Cumulative distribution function (CDF) for Student's t-distribution.
-- [t.pdf](./t.pdf.md): Pprobability density function (PDF) for Student's t-distribution.
+- [t.pdf](./t.pdf.md): Probability density function (PDF) for Student's t-distribution.
