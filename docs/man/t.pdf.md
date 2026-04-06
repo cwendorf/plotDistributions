@@ -1,10 +1,6 @@
 # [`plotDistributions`](https://github.com/cwendorf/plotDistributions)
 
-## Plot the PDF of the Student's t-Distribution
-
-**Aliases:**
-
-- `t.pdf`
+## Student's t PDF
 
 ### Description
 

@@ -1,10 +1,6 @@
 # [`plotDistributions`](https://github.com/cwendorf/plotDistributions)
 
-## Overlay multiple PDFs
-
-**Aliases:**
-
-- `overlay.pdf`
+## Overlay PDFs
 
 ### Description
 

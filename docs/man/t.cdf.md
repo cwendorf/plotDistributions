@@ -1,10 +1,6 @@
 # [`plotDistributions`](https://github.com/cwendorf/plotDistributions)
 
-## Plot the CDF of the Student's t-Distribution
-
-**Aliases:**
-
-- `t.cdf`
+## Student's t CDF
 
 ### Description
 

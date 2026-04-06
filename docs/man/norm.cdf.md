@@ -1,10 +1,6 @@
 # [`plotDistributions`](https://github.com/cwendorf/plotDistributions)
 
-## Plot the CDF of the Normal Distribution
-
-**Aliases:**
-
-- `norm.cdf`
+## Normal CDF
 
 ### Description
 

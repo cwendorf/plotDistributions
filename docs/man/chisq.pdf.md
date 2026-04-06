@@ -1,10 +1,6 @@
 # [`plotDistributions`](https://github.com/cwendorf/plotDistributions)
 
-## Plot the PDF of the Chi-Squared Distribution
-
-**Aliases:**
-
-- `chisq.pdf`
+## Chi-Squared PDF
 
 ### Description
 

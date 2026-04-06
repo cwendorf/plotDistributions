@@ -1,10 +1,6 @@
 # [`plotDistributions`](https://github.com/cwendorf/plotDistributions)
 
-## Plot the CDF of the Binomial Distribution
-
-**Aliases:**
-
-- `binom.cdf`
+## Binomial CDF
 
 ### Description
 

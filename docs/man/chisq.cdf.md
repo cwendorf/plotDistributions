@@ -1,10 +1,6 @@
 # [`plotDistributions`](https://github.com/cwendorf/plotDistributions)
 
-## Plot the CDF of the Chi-Squared Distribution
-
-**Aliases:**
-
-- `chisq.cdf`
+## Chi-Squared CDF
 
 ### Description
 

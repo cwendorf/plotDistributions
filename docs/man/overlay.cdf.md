@@ -1,10 +1,6 @@
 # [`plotDistributions`](https://github.com/cwendorf/plotDistributions)
 
-## Overlay multiple CDFs
-
-**Aliases:**
-
-- `overlay.cdf`
+## Overlay CDFs
 
 ### Description
 

@@ -1,10 +1,6 @@
 # [`plotDistributions`](https://github.com/cwendorf/plotDistributions)
 
-## Plot the PDF of the Binomial Distribution
-
-**Aliases:**
-
-- `binom.pdf`
+## Binomial PDF
 
 ### Description
 

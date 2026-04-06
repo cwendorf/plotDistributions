@@ -1,10 +1,6 @@
 # [`plotDistributions`](https://github.com/cwendorf/plotDistributions)
 
-## Plot the CDF of the F Distribution
-
-**Aliases:**
-
-- `f.cdf`
+## F CDF
 
 ### Description
 

@@ -1,10 +1,6 @@
 # [`plotDistributions`](https://github.com/cwendorf/plotDistributions)
 
-## Plot the PDF of the F Distribution
-
-**Aliases:**
-
-- `f.pdf`
+## F PDF
 
 ### Description
 

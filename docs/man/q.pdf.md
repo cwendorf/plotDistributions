@@ -1,10 +1,6 @@
 # [`plotDistributions`](https://github.com/cwendorf/plotDistributions)
 
-## Plot the PDF of the Studentized Range Distribution
-
-**Aliases:**
-
-- `q.pdf`
+## Studentized Range PDF
 
 ### Description
 

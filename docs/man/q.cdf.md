@@ -1,10 +1,6 @@
 # [`plotDistributions`](https://github.com/cwendorf/plotDistributions)
 
-## Plot the CDF of the Studentized Range Distribution
-
-**Aliases:**
-
-- `q.cdf`
+## Studentized Range CDF
 
 ### Description
 
