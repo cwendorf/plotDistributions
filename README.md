@@ -1,5 +1,4 @@
-
-# `plotDistributions` 
+# [`plotDistributions`](https://github.com/cwendorf/plotDistributions)
 
 ## Visualizing Probability Distributions
 
