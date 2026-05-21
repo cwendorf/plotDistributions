@@ -21,8 +21,3 @@ A plot is produced. Invisibly returns \code{NULL}.
 \description{
 Generates a plot of the cumulative distribution function (CDF) for the Student's t-distribution, with optional visual indicators of probability differences between specified limits or quantiles.
 }
-\examples{
-t.cdf(params = c(df = 5))
-t.cdf(params = c(df = 5), limits = c(1, Inf))
-t.cdf(params = c(df = 5), probs = c(.025, .975))
-}

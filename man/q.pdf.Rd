@@ -21,8 +21,3 @@ A plot is produced. Invisibly returns \code{NULL}.
 \description{
 Generates a plot of the probability density function (PDF) for the Studentized range distribution, with optional shaded regions based on limits or quantiles.
 }
-\examples{
-q.pdf(params = c(nmeans = 2, df = 10))
-q.pdf(params = c(nmeans = 2, df = 10), limits = c(2, Inf))
-q.pdf(params = c(nmeans = 2, df = 10), probs = c(.95, 1))
-}

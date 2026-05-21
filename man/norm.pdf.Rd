@@ -21,8 +21,3 @@ A plot is produced. Invisibly returns \code{NULL}.
 \description{
 Generates a plot of the probability density function (PDF) for the normal distribution, with optional shaded regions defined by limits or quantiles.
 }
-\examples{
-norm.pdf()
-norm.pdf(limits = c(1, Inf))
-norm.pdf(probs = c(.025, .975))
-}

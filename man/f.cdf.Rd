@@ -21,8 +21,3 @@ A plot is produced. Invisibly returns \code{NULL}.
 \description{
 Generates a plot of the cumulative distribution function (CDF) for the F distribution, optionally annotating cumulative probability differences between specified limits or quantiles.
 }
-\examples{
-f.cdf(params = c(df1 = 2, df2 = 10))
-f.cdf(params = c(df1 = 2, df2 = 10), limits = c(3, Inf))
-f.cdf(params = c(df1 = 2, df2 = 10), probs = c(.95, 1))
-}

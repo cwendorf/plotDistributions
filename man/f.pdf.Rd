@@ -21,8 +21,3 @@ A plot is produced. Invisibly returns \code{NULL}.
 \description{
 Generates a plot of the probability density function (PDF) for the F distribution, with optional shaded areas between specified limits or quantiles.
 }
-\examples{
-f.pdf(params = c(df1 = 2, df2 = 10))
-f.pdf(params = c(df1 = 2, df2 = 10), limits = c(3, Inf))
-f.pdf(params = c(df1 = 2, df2 = 10), probs = c(.95, 1))
-}

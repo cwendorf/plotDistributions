@@ -1,0 +1,52 @@
+---
+subtitle: "Noncentral Beta Distribution Examples"
+output:
+  github_document:
+    preserve_yaml: FALSE
+vignette: >
+  %\VignetteIndexEntry{Noncentral Beta Distribution Examples}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r,include=FALSE}
+knitr::opts_chunk$set(fig.width = 7, fig.height = 5, fig.path = "figures/", echo = TRUE, warning = FALSE, message = FALSE)
+devtools::source_gist("8e6e5dc401e3fc1042ef7a030f9d19c7", filename = "revised_toc.R")
+```
+
+```{r,include=FALSE}
+if (!require(plotDistributions)) {
+  if (!require(remotes)) install.packages("remotes")
+  remotes::install_github("cwendorf/plotDistributions")
+}
+library(plotDistributions)
+```
+
+## Noncentral Beta Distribution Examples
+
+```{r toc, echo=FALSE}
+thisfile <- knitr::current_input()
+revised_toc(thisfile, base_level = 3, toc_depth = 1)
+```
+
+---
+
+In these examples, `ncp` is the noncentrality parameter. When `ncp = 0`, the distribution reduces to the usual beta distribution, so the noncentral form is useful when you want to compare a central case against one with an added noncentral effect. For fixed `shape1` and `shape2`, increasing `ncp` pulls more density toward larger values on the 0 to 1 scale, which changes both the location and the skew of the curve.
+
+### Probability Density Function
+
+Get noncentral beta Probability Density Function plots using `ncp` in `params`.
+```{r,nbetaPDF}
+beta.pdf(params = c(shape1 = 3, shape2 = 8, ncp = 4))
+beta.pdf(params = c(shape1 = 3, shape2 = 8, ncp = 4), limits = c(.2, .6))
+beta.pdf(params = c(shape1 = 3, shape2 = 8, ncp = 4), probs = c(.2, .8))
+```
+
+### Cumulative Distribution Function
+
+Get noncentral beta Cumulative Distribution Function plots using `ncp` in `params`.
+```{r,nbetaCDF}
+beta.cdf(params = c(shape1 = 3, shape2 = 8, ncp = 4))
+beta.cdf(params = c(shape1 = 3, shape2 = 8, ncp = 4), limits = c(.2, .6))
+beta.cdf(params = c(shape1 = 3, shape2 = 8, ncp = 4), probs = c(.2, .8))
+```

@@ -21,8 +21,3 @@ A plot is produced. Invisibly returns \code{NULL}.
 \description{
 Generates a plot of the probability density function (PDF) for the Student's t-distribution, with optional shaded area between specified limits or quantiles.
 }
-\examples{
-t.pdf(params = c(df = 5))
-t.pdf(params = c(df = 5), limits = c(1, Inf))
-t.pdf(params = c(df = 5), probs = c(.025, .975))
-}

@@ -1,0 +1,52 @@
+---
+subtitle: "Noncentral Chi-Square Distribution Examples"
+output:
+  github_document:
+    preserve_yaml: FALSE
+vignette: >
+  %\VignetteIndexEntry{Noncentral Chi-Square Distribution Examples}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r,include=FALSE}
+knitr::opts_chunk$set(fig.width = 7, fig.height = 5, fig.path = "figures/", echo = TRUE, warning = FALSE, message = FALSE)
+devtools::source_gist("8e6e5dc401e3fc1042ef7a030f9d19c7", filename = "revised_toc.R")
+```
+
+```{r,include=FALSE}
+if (!require(plotDistributions)) {
+  if (!require(remotes)) install.packages("remotes")
+  remotes::install_github("cwendorf/plotDistributions")
+}
+library(plotDistributions)
+```
+
+## Noncentral Chi-Square Distribution Examples
+
+```{r toc, echo=FALSE}
+thisfile <- knitr::current_input()
+revised_toc(thisfile, base_level = 3, toc_depth = 1)
+```
+
+---
+
+In these examples, `ncp` is the noncentrality parameter. When `ncp = 0`, the distribution reduces to the usual chi-square distribution. As `ncp` increases, the curve shifts to the right and becomes more spread out, so the noncentral version is useful when the central chi-square assumption is no longer appropriate.
+
+### Probability Density Function
+
+Get noncentral chi-square Probability Density Function plots using `ncp` in `params`.
+```{r,nchisqPDF}
+chisq.pdf(params = c(df = 8, ncp = 4))
+chisq.pdf(params = c(df = 8, ncp = 4), limits = c(6, 14))
+chisq.pdf(params = c(df = 8, ncp = 4), probs = c(.2, .8))
+```
+
+### Cumulative Distribution Function
+
+Get noncentral chi-square Cumulative Distribution Function plots using `ncp` in `params`.
+```{r,nchisqCDF}
+chisq.cdf(params = c(df = 8, ncp = 4))
+chisq.cdf(params = c(df = 8, ncp = 4), limits = c(6, 14))
+chisq.cdf(params = c(df = 8, ncp = 4), probs = c(.2, .8))
+```

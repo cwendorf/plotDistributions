@@ -21,8 +21,3 @@ A plot is produced. Invisibly returns \code{NULL}.
 \description{
 Generates a plot of the cumulative distribution function (CDF) for the chi-squared distribution, with optional annotations showing cumulative probability differences between limits or quantiles.
 }
-\examples{
-chisq.cdf(params = c(df = 10))
-chisq.cdf(params = c(df = 10), limits = c(10, Inf))
-chisq.cdf(params = c(df = 10), probs = c(.95, 1))
-}

@@ -1,0 +1,52 @@
+---
+subtitle: "Noncentral Student's t Distribution Examples"
+output:
+  github_document:
+    preserve_yaml: FALSE
+vignette: >
+  %\VignetteIndexEntry{Noncentral Student's t Distribution Examples}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r,include=FALSE}
+knitr::opts_chunk$set(fig.width = 7, fig.height = 5, fig.path = "figures/", echo = TRUE, warning = FALSE, message = FALSE)
+devtools::source_gist("8e6e5dc401e3fc1042ef7a030f9d19c7", filename = "revised_toc.R")
+```
+
+```{r,include=FALSE}
+if (!require(plotDistributions)) {
+  if (!require(remotes)) install.packages("remotes")
+  remotes::install_github("cwendorf/plotDistributions")
+}
+library(plotDistributions)
+```
+
+## Noncentral Student's t Distribution Examples
+
+```{r toc, echo=FALSE}
+thisfile <- knitr::current_input()
+revised_toc(thisfile, base_level = 3, toc_depth = 1)
+```
+
+---
+
+In these examples, `ncp` is the noncentrality parameter. When `ncp = 0`, the distribution reduces to the usual Student's t distribution. Positive `ncp` values shift the distribution to the right, negative values shift it to the left, and larger absolute values of `ncp` make the distribution more asymmetric, so `ncp` controls both location and shape.
+
+### Probability Density Function
+
+Get noncentral Student's t Probability Density Function plots using `ncp` in `params`.
+```{r,ntPDF}
+t.pdf(params = c(df = 15, ncp = 2))
+t.pdf(params = c(df = 15, ncp = 2), limits = c(0, 3))
+t.pdf(params = c(df = 15, ncp = 2), probs = c(.2, .8))
+```
+
+### Cumulative Distribution Function
+
+Get noncentral Student's t Cumulative Distribution Function plots using `ncp` in `params`.
+```{r,ntCDF}
+t.cdf(params = c(df = 15, ncp = 2))
+t.cdf(params = c(df = 15, ncp = 2), limits = c(0, 3))
+t.cdf(params = c(df = 15, ncp = 2), probs = c(.2, .8))
+```
