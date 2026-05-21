@@ -58,8 +58,9 @@ eval.dist <- function(fn, x, params) {
 calc.pdf <- function(main, fns, params = NULL, limits = c(NULL, NULL), probs = c(NULL, NULL)) {
   lb <- eval.dist(fns[[1]], .0005, params)
   ub <- eval.dist(fns[[1]], .9995, params)
-  # Detect discrete (binomial) PDF to avoid non-integer evaluations
-  is_discrete <- identical(fns[[3]], dbinom)
+  # Detect common discrete PDFs to avoid non-integer evaluations
+  discrete_fns <- list(dbinom, dgeom, dhyper, dnbinom, dpois, dwilcox, dsignrank)
+  is_discrete <- any(vapply(discrete_fns, identical, logical(1), fns[[3]]))
   if (is_discrete) {
     x <- seq(floor(lb), ceiling(ub), by = 1)
   } else {
@@ -76,7 +77,7 @@ calc.pdf <- function(main, fns, params = NULL, limits = c(NULL, NULL), probs = c
     limits[is.infinite(limits)] <- 99 * sign(limits[is.infinite(limits)])
     yy <- eval.dist(fns[[2]], limits, params)
     area <- round(yy[2] - yy[1], 3)
-    # For discrete binomial, ensure inclusive integer range probability
+    # For discrete distributions, use inclusive integer range probability
     if (is_discrete && length(limits) == 2) {
       L <- ceiling(limits[1])
       U <- floor(limits[2])

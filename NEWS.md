@@ -2,7 +2,7 @@
 
 ## Pending
 
-- Added binomial distribution support
+- Added support for a dozen more distributions
 - Added functions to create overlay plots
 
 ## plotDistribution 1.1.250625
