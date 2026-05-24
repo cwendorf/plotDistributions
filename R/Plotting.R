@@ -15,7 +15,7 @@
 #' @param bg Background color for shaded area.
 #' @param width Optional width for bars (for discrete distributions).
 #' @noRd
-plot.pdf <- function(main, x, y, px = NULL, py = NULL, area = NULL, col = "black", bg = "gray90", width = NULL) {
+plot.pdf <- function(main, x, y, px = NULL, py = NULL, params = NULL, limits = NULL, probs = NULL, area = NULL, col = "black", bg = "gray90", width = NULL) {
   par(mar = c(7, 5, 5, 2))
   # Add padding to xlim when using bars
   x_range <- if (!is.null(width)) {
@@ -81,17 +81,19 @@ plot.pdf <- function(main, x, y, px = NULL, py = NULL, area = NULL, col = "black
 #' @param difference Optional numeric value representing a difference in CDF values.
 #' @param col Color for lines and text.
 #' @noRd
-plot.cdf <- function(main, x, y, limits = NULL, yy = NULL, difference = NULL, col = "black") {
+plot.cdf <- function(main, x, y, yy = NULL, params = NULL, limits = NULL, probs = NULL, difference = NULL, col = "black") {
   par(mar = c(7, 5, 5, 2))
   plot(NULL, bty = "l", xlim = range(x), ylim = c(0, 1), lwd = 2, xlab = "", ylab = "Cumulative Probability", main = main)
   mtext("Cumulative Distribution Function", padj = -1)
-  if (!is.null(limits)) {
-    lines(c(limits[1], limits[1]), c(.05 * (max(y) - min(y)), yy[1]), lty = "dashed", col = col)
-    lines(c(limits[2], limits[2]), c(.05 * (max(y) - min(y)), yy[2]), lty = "dashed", col = col)
-    text(limits[1], 0, round(limits[1], 3), pos = 3, offset = -.25, col = col)
-    text(limits[2], 0, round(limits[2], 3), pos = 3, offset = -.25, col = col)
-    lines(c(min(x) + .05 * (max(x) - min(x)), limits[1]), c(yy[1], yy[1]), lty = "dashed", col = col)
-    lines(c(min(x) + .05 * (max(x) - min(x)), limits[2]), c(yy[2], yy[2]), lty = "dashed", col = col)
+  draw_limits <- if (!is.null(limits)) limits else limits
+  label_limits <- if (!is.null(limits)) limits else draw_limits
+  if (!is.null(draw_limits) && !is.null(yy) && length(draw_limits) == 2 && length(yy) == 2) {
+    lines(c(draw_limits[1], draw_limits[1]), c(.05 * (max(y) - min(y)), yy[1]), lty = "dashed", col = col)
+    lines(c(draw_limits[2], draw_limits[2]), c(.05 * (max(y) - min(y)), yy[2]), lty = "dashed", col = col)
+    text(draw_limits[1], 0, round(label_limits[1], 3), pos = 3, offset = -.25, col = col)
+    text(draw_limits[2], 0, round(label_limits[2], 3), pos = 3, offset = -.25, col = col)
+    lines(c(min(x) + .05 * (max(x) - min(x)), draw_limits[1]), c(yy[1], yy[1]), lty = "dashed", col = col)
+    lines(c(min(x) + .05 * (max(x) - min(x)), draw_limits[2]), c(yy[2], yy[2]), lty = "dashed", col = col)
     text(min(x), yy[1], round(yy[1], 3), pos = 4, offset = -.25, col = col)
     text(min(x), yy[2], round(yy[2], 3), pos = 4, offset = -.25, col = col)
     result <- paste("Difference = ", round(difference, 3))
