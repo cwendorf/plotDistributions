@@ -107,7 +107,7 @@ calc.pdf <- function(main, fns, params = NULL, limits = c(NULL, NULL), probs = c
       py <- c(0, eval.dist(fns[[3]], xx, params), 0)
     }
   }
-  list(main = main, x = x, y = y, px = px, py = py, area = area)
+  list(main = main, x = x, y = y, px = px, py = py, params = params, limits = limits, probs = probs, area = area)
 }
 
 #' Prepare Data for a Cumulative Distribution Plot
@@ -135,5 +135,5 @@ calc.cdf <- function(main, fns, params = NULL, limits = c(NULL, NULL), probs = c
     yy <- eval.dist(fns[[2]], limits, params)
     difference <- round(yy[2] - yy[1], 3)
   }
-  list(main = main, x = x, y = y, limits = limits, yy = yy, difference = difference)
+  list(main = main, x = x, y = y, yy = yy, params = params, limits = limits, probs = yy, difference = difference)
 }
