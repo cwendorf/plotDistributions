@@ -1,6 +1,6 @@
 # plotDistributions
 
-## Pending
+## plotDistributions 1.2.260524
 
 - Added support for a dozen more distributions
 - Added functions to create overlay plots
