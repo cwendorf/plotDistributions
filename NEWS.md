@@ -1,21 +1,21 @@
 # plotDistributions
 
-## plotDistributions 1.2.260524
+## plotDistributions 1.260524
 
 - Added support for a dozen more distributions
 - Added functions to create overlay plots
 
-## plotDistribution 1.1.250625
+## plotDistribution 1.250625
 
 - Added documentation to functions
 
-## plotDistributions 1.0.231007
+## plotDistributions 1.231007
 
 - Added vignettes to demonstrate distributions
 - Updated color handling
 - Readjusted label points
 
-## plotDistributions 0.1.220303
+## plotDistributions 0.220303
 
 - Initial release
 - Plotting of built in R distributions
