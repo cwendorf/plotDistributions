@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "plotDistributions: Visualizing Probability Distributions"
+authors:
+  - family-names: "Wendorf"
+    given-names: "Craig A."
+    email: "cwendorf@uwsp.edu"
+version: "1.260524"
+license: "MIT"
+repository-code: "https://github.com/cwendorf/plotDistributions"
+url: "https://github.com/cwendorf/plotDistributions"
+abstract: >-
+  plotDistributions provides functions to plot and visualize continuous
+  distributions.
