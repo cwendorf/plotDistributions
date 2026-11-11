@@ -5,10 +5,5 @@ authors:
   - family-names: "Wendorf"
     given-names: "Craig A."
     email: "cwendorf@uwsp.edu"
-version: "1.260524"
-license: "MIT"
-repository-code: "https://github.com/cwendorf/plotDistributions"
+date-released: "2026-05-24"
 url: "https://github.com/cwendorf/plotDistributions"
-abstract: >-
-  plotDistributions provides functions to plot and visualize continuous
-  distributions.
