@@ -2,7 +2,7 @@ Package: plotDistributions
 Type: Package
 Title: Visualizing Probability Distributions
 Description: plotDistributions provides functions to plot and visualize continuous distributions. 
-Version: 1.1.250625
+Version: 1.260524
 Authors@R: person("Craig", "Wendorf", email = "cwendorf@uwsp.edu", role = c("aut", "cre"))
 License: MIT + file LICENSE
 URL: https://github.com/cwendorf/plotDistributions
