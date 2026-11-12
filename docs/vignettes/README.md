@@ -2,6 +2,14 @@
 
 ## Articles
 
+This section contains articles for `plotDistributions`. They demonstrate distribution functions with examples of continuous, noncentral, and discrete distributions.
+
+- [Continuous Distribution Examples](#continuous-distribution-examples)
+- [Continuous Noncentral Distribution Examples](#continuous-noncentral-distribution-examples)
+- [Discrete Distribution Examples](#discrete-distribution-examples)
+
+---
+
 ### Continuous Distribution Examples
 
 - [Beta Distribution Examples](./BetaDistributionExamples.md)

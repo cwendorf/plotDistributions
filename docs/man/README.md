@@ -2,7 +2,30 @@
 
 ## Reference
 
-This section is the reference for backcalc. Each page documents one exported function, including usage, arguments, and return values.
+This section is the reference for `plotDistributions`. Each page documents one exported function, including usage, arguments, return values, and examples.
+
+- [Binomial Distribution](#binomial-distribution)
+- [Beta Distribution](#beta-distribution)
+- [Cauchy Distribution](#cauchy-distribution)
+- [Chi-Squared Distribution](#chi-squared-distribution)
+- [F Distribution](#f-distribution)
+- [Exponential Distribution](#exponential-distribution)
+- [Gamma Distribution](#gamma-distribution)
+- [Geometric Distribution](#geometric-distribution)
+- [Hypergeometric Distribution](#hypergeometric-distribution)
+- [Log-Normal Distribution](#log-normal-distribution)
+- [Logistic Distribution](#logistic-distribution)
+- [Negative Binomial Distribution](#negative-binomial-distribution)
+- [Normal Distribution](#normal-distribution)
+- [Poisson Distribution](#poisson-distribution)
+- [Studentized Range Distribution](#studentized-range-distribution)
+- [Student's t Distribution](#students-t-distribution)
+- [Uniform Distribution](#uniform-distribution)
+- [Weibull Distribution](#weibull-distribution)
+- [Wilcoxon Rank Sum Distribution](#wilcoxon-rank-sum-distribution)
+- [Wilcoxon Signed Rank Distribution](#wilcoxon-signed-rank-distribution)
+
+---
 
 ### Binomial Distribution
 

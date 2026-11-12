@@ -2,9 +2,16 @@
 
 ## Introduction
 
+Understanding a probability distribution can require examining its density, cumulative probabilities, and critical values. `plotDistributions` provides visual tools for exploring these features across distribution families.
+
+- [Overview](#overview)
+- [Resources](#resources)
+
+---
+
 ### Overview
 
-`plotDistributions` is a small R package for plotting the probability density and cumulative distribution functions for various continuous distributions. It provides functionality to highlight probabilities and display critical values. 
+`plotDistributions` plots probability density or mass functions and cumulative distribution functions for continuous and discrete distributions. Its tools can highlight probabilities and display critical values.
 
 ![Screenshot of plotDistributions Output](./vignettes/figures/CoverImage.jpg)
 
